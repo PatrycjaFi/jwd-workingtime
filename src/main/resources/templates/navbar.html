@@ -6,16 +6,17 @@
 </head>
 <body>
 
-<nav th:fragment="nav" class="navbar navbar-expand-lg p-3 bg-success">
+<nav th:fragment="nav" class="navbar navbar-expand-lg p-3 bg-secondary">
     <div class="container-fluid">
-        <a class="navbar-brand text-white" th:href="@{/}"><i class="bi bi-people"></i>Time Management</a>
+        <a class="navbar-brand text-white" th:href="@{/main}"><i class="bi bi-people"></i>Time Management</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link text-white" th:href="@{/panel}">Employee Panel</a>
-                <a class="nav-link text-white" th:href="@{/overview}">Overview</a>
+                <a class="nav-link text-white" th:href="@{/absence-log}">Absence Panel</a>
+                <a class="nav-link text-white" th:href="@{/employee-log}">Employee Panel</a>
+                <a class="nav-link text-white" th:href="@{/date-log}">Date Panel</a>
             </div>
         </div>
     </div>

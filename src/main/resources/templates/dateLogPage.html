@@ -7,14 +7,13 @@
 <body>
 
 <div class="container">
-
     <h1>Fill the absence date:</h1>
-    <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label"></label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Date" th:field="*{date}">
+
+    <div>
+        <input class="form-control" type="text"
+               placeholder="Date input" aria-label="default input example">
         <a type="button" class="btn btn-secondary" th:href="@{/overview}">Confirm</a></td>
     </div>
-
 
 </div>
 

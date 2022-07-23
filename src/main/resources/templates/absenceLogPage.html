@@ -5,20 +5,19 @@
 
 <body>
 <div class="container">
-
     <h1>Chose the absence reason:</h1>
 
     <table class="table">
         <tbody>
-
         <tr th:each="reason : ${reasons}">
-            <td th:text="${reason}"></td>
-            <td><a type="button" class="btn btn-secondary" th:href="@{/employee-log}">Select</a></td>
+            <td
+                    th:text="${reason}"
+                    th:data-reason-href="'/absence-log/' + ${reason}"
+                    th:onclick="location.href=this.getAttribute('data-reason-href')"></td>
         </tr>
-
         </tbody>
     </table>
-
+    <div>  <a type="button" class="btn btn-secondary" th:href="@{/employee-log}">Next page</a> </div>
 </div>
 </body>
 </html>

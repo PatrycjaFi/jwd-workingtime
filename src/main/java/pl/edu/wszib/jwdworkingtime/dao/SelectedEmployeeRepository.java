@@ -8,7 +8,7 @@ import pl.edu.wszib.jwdworkingtime.model.entities.SelectedEmployeeEntity;
 
 @Repository
 public interface SelectedEmployeeRepository extends JpaRepository<SelectedEmployeeEntity, Integer> {
-SelectedEmployeeEntity findFirstByName(String name);
+SelectedEmployeeEntity findFirstByEmployee(String employee);
 
 
 }

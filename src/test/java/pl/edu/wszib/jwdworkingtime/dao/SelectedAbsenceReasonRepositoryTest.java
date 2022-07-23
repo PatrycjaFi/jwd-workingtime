@@ -15,7 +15,6 @@ class SelectedAbsenceReasonRepositoryTest {
 
     public static final String REASON_1 = "Planned holiday";
     public static final String REASON_2 = "Sick leave";
-//    public static final int TOTAL_REASONS = 2;
 
     @Autowired
     SelectedAbsenceReasonRepository selectedAbsenceReasonRepository;

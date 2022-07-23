@@ -6,5 +6,5 @@ import pl.edu.wszib.jwdworkingtime.model.entities.SelectedDateEntity;
 
 @Repository
 public interface SelectedDateRepository extends JpaRepository<SelectedDateEntity, Integer> {
-    SelectedDateEntity findFirstByDate (String date);
+    SelectedDateEntity findFirstByDate(String date);
 }

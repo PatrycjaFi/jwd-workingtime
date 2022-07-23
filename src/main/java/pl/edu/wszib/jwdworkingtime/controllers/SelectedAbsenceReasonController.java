@@ -8,19 +8,20 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.edu.wszib.jwdworkingtime.dao.SelectedAbsenceReasonRepository;
 import pl.edu.wszib.jwdworkingtime.model.entities.SelectedAbsenceReasonEntity;
+import pl.edu.wszib.jwdworkingtime.services.SelectedAbsenceReasonService;
 
 @Controller
 @RequestMapping
 public class SelectedAbsenceReasonController {
 
     @Autowired
-    SelectedAbsenceReasonRepository selectedAbsenceReasonRepository;
+    SelectedAbsenceReasonService selectedAbsenceReasonService;
 
     @GetMapping({"/absence-log", "/absence-log/{reason}"})
     public String showAbsenceLogPage(@PathVariable(required = false) String reason, Model model) {
 
         if (reason !=null&&!reason.isEmpty()) {
-            selectedAbsenceReasonRepository.save(new SelectedAbsenceReasonEntity(reason));
+            selectedAbsenceReasonService.save(reason);
         }
 
         String[] reasons = {

@@ -7,19 +7,20 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.edu.wszib.jwdworkingtime.dao.SelectedEmployeeRepository;
 import pl.edu.wszib.jwdworkingtime.model.entities.SelectedEmployeeEntity;
+import pl.edu.wszib.jwdworkingtime.services.SelectedEmployeeService;
 
 @Controller
 @RequestMapping
 public class SelectedEmployeeController {
 
     @Autowired
-    SelectedEmployeeRepository selectedEmployeeRepository;
+    SelectedEmployeeService selectedEmployeeService;
 
     @GetMapping({"/employee-log", "/employee-log/{employee}"})
     public String showEmployeePanel(@PathVariable(required = false) String employee, Model model) {
 
         if(employee !=null&&!employee.isEmpty()) {
-            selectedEmployeeRepository.save(new SelectedEmployeeEntity(employee));
+            selectedEmployeeService.save(employee);
         }
 
         String[] employees = {

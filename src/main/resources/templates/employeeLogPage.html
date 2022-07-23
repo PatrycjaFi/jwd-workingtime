@@ -12,11 +12,16 @@
     <table class="table">
         <tbody>
         <tr th:each="employee : ${employees}">
-            <td th:text="${employee}"></td>
-            <td><a type="button" class="btn btn-secondary" th:href="@{/date-log}">Select</a></td>
+            <td
+                    th:text="${employee}"
+                    th:data-employee-href="'/employee-log/' + ${employee}"
+                    th:onclick="location.href=this.getAttribute('data-employee-href')"
+            ></td>
         </tr>
         </tbody>
     </table>
+
+    <div> <a type="button" class="btn btn-secondary" th:href="@{/date-log}">Next page</a></td></div>
 
 </div>
 

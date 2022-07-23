@@ -10,25 +10,31 @@ public class SelectedEmployeeEntity {
     @GeneratedValue
     @Column(name = "id")
     private Integer id;
-    @Column(name = "name")
-    private String name;
+    @Column(name = "employee")
+    private String employee;
 
 
     public SelectedEmployeeEntity() {
     }
 
-    public SelectedEmployeeEntity(String name) {
-        this.name = name;
+    public SelectedEmployeeEntity(String employee) {
+        this.employee = employee;
     }
+
     public Integer getId() {
         return id;
     }
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
+    public String getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(String employee) {
+        this.employee = employee;
+    }
 }
 

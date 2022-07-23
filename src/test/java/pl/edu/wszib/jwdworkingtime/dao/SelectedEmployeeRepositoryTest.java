@@ -42,9 +42,9 @@ class SelectedEmployeeRepositoryTest {
 
     @Test
     void testFetchData() {
-    SelectedEmployeeEntity employeeEntity = selectedEmployeeRepository.findFirstByName(EMPLOYEE_ONE);
+    SelectedEmployeeEntity employeeEntity = selectedEmployeeRepository.findFirstByEmployee(EMPLOYEE_ONE);
         assertEquals(EMPLOYEE_ONE,
-                employeeEntity.getName(),
+                employeeEntity.getEmployee(),
                 "Incorrect employee name has been found.");
     }
 

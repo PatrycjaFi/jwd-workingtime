@@ -3,11 +3,11 @@ package pl.edu.wszib.jwdworkingtime.model.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "employees")
+@Table(name = "SelectedEmployees")
 public class SelectedEmployeeEntity {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Integer id;
     @Column(name = "employee")

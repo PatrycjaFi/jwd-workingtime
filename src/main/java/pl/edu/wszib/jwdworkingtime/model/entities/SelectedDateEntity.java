@@ -3,11 +3,11 @@ package pl.edu.wszib.jwdworkingtime.model.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "absence_dates")
+@Table(name = "SelectedDates")
 public class SelectedDateEntity {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Integer id;
     @Column(name = "date")
@@ -15,6 +15,7 @@ public class SelectedDateEntity {
 
     public SelectedDateEntity() {
     }
+
     public SelectedDateEntity(String date) {
         this.date = date;
     }

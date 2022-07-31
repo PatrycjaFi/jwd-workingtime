@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import pl.edu.wszib.jwdworkingtime.dao.SelectedMonthRepository;
-import pl.edu.wszib.jwdworkingtime.model.entities.SelectedEmployeeEntity;
 import pl.edu.wszib.jwdworkingtime.model.entities.SelectedMonthEntity;
 
 import static org.junit.jupiter.api.Assertions.*;

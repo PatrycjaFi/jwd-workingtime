@@ -41,9 +41,5 @@ class SelectedAbsenceReasonRepositoryTest {
        assertEquals(REASON_1, selectedAbsenceReasonEntity.getReason(), "Wrong reason has been found.");
     }
 
-//    @Test
-//    void testFetchAllData() {
-//        Collection selectedAbsenceReasons = (Collection) selectedAbsenceReasonRepository.findAll();
-//        assertEquals(TOTAL_REASONS, selectedAbsenceReasons.size(), "Wrong amount of reasons.");
-//    }
+
 }

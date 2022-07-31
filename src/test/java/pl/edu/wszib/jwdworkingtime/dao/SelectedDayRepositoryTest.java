@@ -5,31 +5,32 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
+import pl.edu.wszib.jwdworkingtime.model.entities.SelectedDayEntity;
 import pl.edu.wszib.jwdworkingtime.model.entities.SelectedMonthEntity;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @Transactional
-class SelectedMonthRepositoryTest {
+class SelectedDayRepositoryTest {
 
-    public static final String MONTH1 = "May";
+    public static final String DAY1 = "22";
 
     @Autowired
-    SelectedMonthRepository selectedMonthRepository;
+    SelectedDayRepository selectedDayRepository;
 
     @BeforeEach
     void setUp() {
-        SelectedMonthEntity monthEntity = new SelectedMonthEntity(MONTH1);
-        assertNull(monthEntity.getId());
-        selectedMonthRepository.save(monthEntity);
-        assertNotNull(monthEntity.getId());
+        SelectedDayEntity dayEntity = new SelectedDayEntity(DAY1);
+        assertNull(dayEntity.getId());
+        selectedDayRepository.save(dayEntity);
+        assertNotNull(dayEntity.getId());
     }
 
     @Test
     void testFetchDate() {
-        SelectedMonthEntity monthEntity = selectedMonthRepository.findFirstByMonth(MONTH1);
-        assertEquals(MONTH1, monthEntity.getMonth(), "Incorrect month has been found.");
+        SelectedDayEntity dayEntity = selectedDayRepository.findFirstByDay(DAY1);
+        assertEquals(DAY1, dayEntity.getDay(), "Incorrect day has been found.");
     }
 
 }

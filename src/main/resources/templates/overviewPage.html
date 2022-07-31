@@ -36,6 +36,15 @@
         </div>
     </td>
 
+    <td>
+        <div>
+            <h5>Absence day:</h5>
+            <p th:each="selectedDay : ${selectedDays}"
+               th:text="${selectedDay.day}"
+            ></p>
+        </div>
+    </td>
+
 
 </tr>
 

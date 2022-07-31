@@ -14,12 +14,12 @@ import pl.edu.wszib.jwdworkingtime.services.SelectedMonthService;
 public class SelectedMonthPageController {
 
     @Autowired
-    SelectedMonthService selectedDateService;
+    SelectedMonthService selectedMonthService;
 
     @GetMapping({"/month-log", "/month-log/{month}"})
-    public String showDatePage(@PathVariable(required = false) String month, Model model) {
+    public String showMonthPage(@PathVariable(required = false) String month, Model model) {
         if (month !=null&&!month.isEmpty()) {
-            selectedDateService.save(month);
+            selectedMonthService.save(month);
         }
 
 

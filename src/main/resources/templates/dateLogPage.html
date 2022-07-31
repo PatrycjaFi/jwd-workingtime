@@ -9,11 +9,10 @@
 <div class="container">
     <h1>Fill the absence date:</h1>
 
-    <div>
-        <input class="form-control" type="text"
-               placeholder="Date input" aria-label="default input example">
+    <form th:object="${selectDate}">
+        <input class="form-control mb-3" type="text" placeholder="Date input" aria-label="default input example" th:field="*{date}" required>
         <a type="button" class="btn btn-secondary" th:href="@{/overview}">Confirm</a></td>
-    </div>
+    </form>
 
 </div>
 

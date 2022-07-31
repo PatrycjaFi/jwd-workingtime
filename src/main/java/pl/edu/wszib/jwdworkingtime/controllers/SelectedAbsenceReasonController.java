@@ -6,8 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import pl.edu.wszib.jwdworkingtime.dao.SelectedAbsenceReasonRepository;
-import pl.edu.wszib.jwdworkingtime.model.entities.SelectedAbsenceReasonEntity;
 import pl.edu.wszib.jwdworkingtime.services.SelectedAbsenceReasonService;
 
 @Controller

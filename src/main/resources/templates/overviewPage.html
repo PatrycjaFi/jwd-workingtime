@@ -25,15 +25,16 @@
         ></p>
     </div>
 </td>
+
+
     <td>
         <div>
-            <h5>Absence date:</h5>
-            <p th:each="selectedDate : ${selectedDates}"
-               th:text="${selectedDate.date}"
+            <h5>Absence month:</h5>
+            <p th:each="selectedMonth : ${selectedMonths}"
+               th:text="${selectedMonth.month}"
             ></p>
         </div>
     </td>
-
 
 
 </tr>
